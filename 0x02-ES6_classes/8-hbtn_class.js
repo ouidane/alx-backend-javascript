@@ -21,10 +21,10 @@ export default class ALXClass {
   }
 
   [Symbol.toPrimitive](hint) {
-    if (hint === "number") {
+    if (hint === 'number') {
       return this.size;
     }
-    if (hint === "string") {
+    if (hint === 'string') {
       return this.location;
     }
     return this;
