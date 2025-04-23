@@ -1,9 +1,15 @@
-interface printTeacherFunction {
-  (firstName: string, lastName: string): string;
-}
+/// <reference path="./crud.d.ts" />
 
-const printTeacher: printTeacherFunction = (firstName, lastName) => {
-  return `${firstName.charAt(0)}. ${lastName}`;
+import { RowID, RowElement } from './interface';
+import * as CRUD from './crud';
+
+const row: RowElement = {
+  firstName: 'Guillaume',
+  lastName: 'Salva'
 };
 
-console.log(printTeacher("John", "Doe"));
+const newRowID: RowID = CRUD.insertRow(row);
+const updatedRow: RowElement = { ...row, age: 23 };
+
+CRUD.updateRow(newRowID, updatedRow);
+CRUD.deleteRow(newRowID);
