@@ -1,5 +1,5 @@
 /**
- * Miscellaneous route.
+ * Class AppController
  */
 class AppController {
   static getHomepage(request, response) {
@@ -8,4 +8,3 @@ class AppController {
 }
 
 export default AppController;
-module.exports = AppController;

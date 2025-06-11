@@ -1,7 +1,8 @@
 import fs from 'fs';
 
 /**
- * Reads the data of students in a CSV data file.
+ * Reads the data of students in a CSV file.
+ * @param {String} dataPath - The path to the CSV file.
  */
 const readDatabase = (dataPath) => new Promise((resolve, reject) => {
   if (!dataPath) {
@@ -41,4 +42,3 @@ const readDatabase = (dataPath) => new Promise((resolve, reject) => {
 });
 
 export default readDatabase;
-module.exports = readDatabase;

@@ -1,10 +1,9 @@
 import readDatabase from '../utils';
 
-
 const VALID_MAJORS = ['CS', 'SWE'];
 
 /**
- * Contains route handlers.
+ * The StudentsController class
  */
 class StudentsController {
   static getAllStudents(request, response) {
@@ -13,8 +12,6 @@ class StudentsController {
     readDatabase(dataPath)
       .then((studentGroups) => {
         const responseParts = ['This is the list of our students'];
-        // A comparison function for ordering a list of strings in ascending
-        // order by alphabetic order and case insensitive
         const cmpFxn = (a, b) => {
           if (a[0].toLowerCase() < b[0].toLowerCase()) {
             return -1;
@@ -68,4 +65,3 @@ class StudentsController {
 }
 
 export default StudentsController;
-module.exports = StudentsController;
